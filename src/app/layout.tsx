@@ -10,19 +10,16 @@ import fs from "fs";
 import path from "path";
 
 export const metadata = {
-  title: "Extensions Showcase — Aman Kumar",
+  title: "Student Planner — Student Productivity App",
   description:
-    "A modern gallery showcasing Chrome & VS Code extensions built by Aman Kumar.",
+    "Student Planner — manage tasks, notes, expenses and view simple analytics. Built with Expo and React Native.",
   metadataBase: new URL("http://localhost:3000"),
   openGraph: {
-    images: ["/og-image.png"],
+    images: ["/videos/student-how-to-download-poster.jpg"],
   },
   authors: [{ name: "Aman Kumar", url: "https://github.com/EternalKnight002" }],
 };
 
-/**
- * Server helper: read extensions.json and return array length (safe fallback).
- */
 async function getExtensionsCount(): Promise<number> {
   try {
     const file = path.join(process.cwd(), "data", "extensions.json");
@@ -32,7 +29,6 @@ async function getExtensionsCount(): Promise<number> {
     if (Array.isArray(parsed)) return parsed.length;
     return 0;
   } catch (err) {
-    
     console.error("Error reading extensions.json:", err);
     return 0;
   }
@@ -46,7 +42,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <head />
       <body>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
-         
           <header className="py-3 backdrop-blur-sm">
             <div className="container flex items-center justify-between">
               <Link href="/" className="flex items-center gap-3">
@@ -55,11 +50,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                     <div className="h-9 w-9 rounded-full bg-white/10" />
                   </div>
 
-                  
                   <span
                     className="absolute -top-1 -right-1 inline-flex items-center justify-center px-2 py-0.5 text-xs font-medium rounded-full bg-white text-indigo-700 shadow-sm"
                     aria-hidden="false"
-                    title={`${count} extensions`}
+                    title={`${count} apps`}
                   >
                     {count}
                   </span>
@@ -67,10 +61,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
                 <div>
                   <h2 className="text-base md:text-lg font-semibold tracking-tight text-slate-900 dark:text-white">
-                    Aman’s Toolbox
+                    Student Planner
                   </h2>
                   <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
-                    Tiny tools for daily flow
+                    Tasks • Notes • Expenses
                   </p>
                 </div>
               </Link>
@@ -81,28 +75,28 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             </div>
           </header>
 
-         
           <main>{children}</main>
 
-          
           <footer className="site-footer py-20 mt-12">
             <div className="container mx-auto px-6">
               <div className="site-footer__inner">
                 <h2 className="footer-heading">
-                  Love it? Hate it? Broke it?
+                  Found a bug or have feedback?
                 </h2>
 
                 <p className="footer-subtext mt-3">
-                  Your feedback makes these extensions better. Don’t hesitate to drop me a line.
+                  Open an issue on GitHub or email me — your feedback helps improve the app.
                 </p>
 
                 <a
-                  href="mailto:resoamankumar@gmail.com"
+                  href="https://github.com/EternalKnight002/student-productivity-app/issues"
                   role="button"
                   aria-describedby="footer-contact-desc"
                   className="footer-cta mt-6 inline-block shimmer-hover"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Email me
+                  Report issue
                 </a>
 
                 <div className="footer-social mt-8" aria-hidden="false">
@@ -138,7 +132,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 </div>
 
                 <p id="footer-contact-desc" className="footer-note mt-10">
-                  © {new Date().getFullYear()} — Aman Kumar
+                  © {new Date().getFullYear()} — Student Planner
                 </p>
               </div>
             </div>

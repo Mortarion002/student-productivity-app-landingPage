@@ -3,8 +3,9 @@ import React from "react";
 import fs from "fs";
 import path from "path";
 import ExtensionCard from "../components/ExtensionCard";
-import HowToDownloadSection from "../components/HowToDownloadSection";
+import HowToDownloadSection from "../components/DownloadSection";
 import AnimatedHero from "../components/AnimatedHero";
+import DownloadSection from "../components/DownloadSection";
 
 /**
  * Main homepage
@@ -55,8 +56,8 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* How to Download */}
-      <HowToDownloadSection />
+      {/* Download Section */}
+      <DownloadSection />
     </>
   );
 }
