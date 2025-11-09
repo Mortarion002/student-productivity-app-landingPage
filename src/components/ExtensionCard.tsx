@@ -18,7 +18,11 @@ type Ext = {
 };
 
 export default function ExtensionCard({ ext }: { ext: Ext }) {
-  const shots = ext.screenshots && ext.screenshots.length > 0 ? ext.screenshots : [ext.poster || "/screenshots/placeholder.jpg"];
+  const shots =
+    ext.screenshots && ext.screenshots.length > 0
+      ? ext.screenshots
+      : [ext.poster || "/screenshots/placeholder.jpg"];
+
   const [activeIndex, setActiveIndex] = React.useState(0);
   const main = shots[activeIndex] ?? shots[0];
 
@@ -28,116 +32,97 @@ export default function ExtensionCard({ ext }: { ext: Ext }) {
 
   return (
     <section className="col-span-full w-full">
-      <div className="card rounded-2xl overflow-hidden shadow-lg">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
-          {/* LEFT: big visual */}
-          <div className="md:col-span-2 bg-black/5 dark:bg-black/20">
-            <div className="w-full h-[420px] md:h-[480px] relative">
+      <div className="card rounded-2xl overflow-hidden shadow-lg p-6">
+        <div className="promo-grid">
+          {/* Left visual area */}
+          <div>
+            <div style={{ position: "relative" }}>
               <img
                 src={main}
                 alt={`${ext.title} screenshot`}
                 onError={onImgError}
-                className="w-full h-full object-cover object-center block"
+                className="promo-visual"
                 loading="lazy"
                 draggable={false}
               />
 
-              {/* overlay for title (bottom-left) */}
-              <div className="absolute left-4 bottom-4 z-20 p-3 rounded-lg bg-gradient-to-t from-black/60 to-transparent">
-                <h3 className="text-white text-xl font-bold leading-tight">{ext.title}</h3>
-                {ext.shortDesc && <p className="text-white/90 text-sm mt-1 max-w-xl hidden md:block">{ext.shortDesc}</p>}
+              <div style={{ position: "absolute", left: 20, bottom: 20 }} className="promo-overlay">
+                <h3 className="text-white text-lg font-bold leading-tight">{ext.title}</h3>
+                {ext.shortDesc && <p className="text-white/90 text-sm mt-1 hidden md:block">{ext.shortDesc}</p>}
               </div>
             </div>
 
-            {/* thumbnails */}
             {shots.length > 1 && (
-              <div className="flex gap-3 p-4 overflow-x-auto items-center">
+              <div className="promo-thumbs mt-3">
                 {shots.map((s, i) => (
                   <button
                     key={s + i}
                     onClick={() => setActiveIndex(i)}
-                    className={`rounded-lg overflow-hidden border-2 ${i === activeIndex ? "border-indigo-500" : "border-transparent"} focus-ring`}
                     aria-label={`View screenshot ${i + 1}`}
+                    className={i === activeIndex ? "active" : ""}
                     style={{ minWidth: 92 }}
                   >
-                    <img
-                      src={s}
-                      alt={`screenshot ${i + 1}`}
-                      onError={onImgError}
-                      className="w-24 h-24 object-cover object-center block"
-                      loading="lazy"
-                      draggable={false}
-                    />
+                    <img src={s} alt={`screenshot ${i + 1}`} onError={onImgError} className="w-24 h-24 object-cover" />
                   </button>
                 ))}
               </div>
             )}
           </div>
 
-          {/* RIGHT: content & CTAs */}
-          <aside className="p-6 md:col-span-1 flex flex-col justify-between">
-            <div>
-              <h3 className="text-2xl font-extrabold mb-2 md:hidden">{ext.title}</h3>
-              {ext.shortDesc && <p className="text-gray-700 dark:text-gray-300 mb-4">{ext.shortDesc}</p>}
+          {/* Right content area */}
+          <aside className="promo-meta">
+            <h3 className="text-2xl font-extrabold mb-2 hidden md:block">{ext.title}</h3>
 
-              {ext.tags && ext.tags.length > 0 && (
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {ext.tags.map((t) => (
-                    <span key={t} className="text-xs px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 dark:bg-white/6 dark:text-indigo-200">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              )}
+            {ext.tags && ext.tags.length > 0 && (
+              <div className="flex flex-wrap gap-2 mb-4">
+                {ext.tags.map((t) => (
+                  <span key={t} className="text-xs px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 dark:bg-white/6 dark:text-indigo-200">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            )}
 
-              {ext.longDesc && (
-                <div className="prose max-w-none text-sm text-gray-600 dark:text-gray-300 mb-4 line-clamp-5">
-                  {ext.longDesc}
-                </div>
+            {ext.longDesc && (
+              <p className="text-gray-700 dark:text-gray-300 mb-4 text-sm line-clamp-6">{ext.longDesc}</p>
+            )}
+
+            <div className="promo-ctas mt-4">
+              <a
+                href={ext.downloadUrl || ext.githubUrl || "#"}
+                className="primary inline-flex items-center justify-center gap-2 px-4 py-3 bg-indigo-600 text-white rounded-lg font-semibold shadow hover:opacity-95"
+                rel="noopener noreferrer"
+              >
+                <FaDownload className="h-4 w-4" />
+                Download APK
+              </a>
+
+              {ext.expoUrl && (
+                <a
+                  href={ext.expoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-3 border rounded-lg text-sm"
+                >
+                  Open in Expo
+                </a>
               )}
             </div>
 
-            <div className="mt-4">
-              <div className="flex flex-col sm:flex-row gap-3">
-                <a
-                  href={ext.downloadUrl || ext.githubUrl || "#"}
-                  className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-indigo-600 text-white rounded-lg font-semibold shadow hover:opacity-95 flex-1"
-                  rel="noopener noreferrer"
-                >
-                  <FaDownload className="h-4 w-4" />
-                  Download APK
-                </a>
+            <div className="mt-4 flex items-center gap-3">
+              <a
+                href={ext.githubUrl || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-icon p-2 inline-flex items-center justify-center"
+                aria-label="Open on GitHub"
+              >
+                <FaGithub />
+              </a>
 
-                {ext.expoUrl && (
-                  <a
-                    href={ext.expoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-4 py-3 border rounded-lg text-sm flex-1"
-                  >
-                    Open in Expo
-                  </a>
-                )}
-              </div>
-
-              <div className="mt-3 flex items-center gap-3">
-                <a
-                  href={ext.githubUrl || "#"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-icon p-2 inline-flex items-center justify-center"
-                  aria-label="Open on GitHub"
-                >
-                  <FaGithub />
-                </a>
-
-                <a
-                  href="#download"
-                  className="text-sm text-gray-600 dark:text-gray-300 ml-2 underline"
-                >
-                  Download & Install info
-                </a>
-              </div>
+              <a href="#download" className="text-sm text-gray-600 dark:text-gray-300 ml-2 underline">
+                Download & Install info
+              </a>
             </div>
           </aside>
         </div>

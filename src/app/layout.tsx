@@ -49,14 +49,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                   <div className="rounded-full p-2 bg-gradient-to-br from-indigo-500 to-cyan-400 shadow-md">
                     <div className="h-9 w-9 rounded-full bg-white/10" />
                   </div>
-
-                  <span
-                    className="absolute -top-1 -right-1 inline-flex items-center justify-center px-2 py-0.5 text-xs font-medium rounded-full bg-white text-indigo-700 shadow-sm"
-                    aria-hidden="false"
-                    title={`${count} apps`}
-                  >
-                    {count}
-                  </span>
                 </div>
 
                 <div>

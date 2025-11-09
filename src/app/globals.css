@@ -605,3 +605,80 @@ section.relative > .container { position: relative; z-index: 2; }
   background: linear-gradient(180deg, rgba(79,70,229,1), rgba(99,102,241,1));
   color: #fff;
 }
+
+/* ---------------- Additional landing polish (promo-grid + helpers) ---------------- */
+
+/* Make the main container slightly narrower for desktop for better line length */
+.container {
+  max-width: 1100px; /* slightly narrower for readable lines */
+}
+
+/* Promo grid (image / meta column) */
+.promo-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px; /* image column + fixed right column */
+  gap: 28px;
+  align-items: start;
+}
+
+/* Make the image area consistent height and crop */
+.promo-visual {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Thumbnails row styling */
+.promo-thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  padding-bottom: 6px;
+  overflow-x: auto;
+}
+.promo-thumbs button {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  padding: 0;
+}
+.promo-thumbs button.active {
+  border-color: rgba(99,102,241,0.95);
+  box-shadow: 0 8px 20px rgba(2,6,23,0.12);
+}
+
+/* Right column card */
+.promo-meta {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding: 20px;
+  border-radius: 12px;
+  height: fit-content;
+}
+
+/* Overlay used on main visual */
+.promo-overlay {
+  background: linear-gradient(180deg, rgba(0,0,0,0.48), rgba(0,0,0,0.18));
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+/* CTA styling */
+.promo-ctas { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+.promo-ctas a.primary { min-width: 220px; }
+
+/* Improve poster block and spacing on the download section */
+#download .card img {
+  border-radius: 12px;
+  display: block;
+}
+
+/* Mobile: stack grid into single column for clarity */
+@media (max-width: 880px) {
+  .promo-grid { grid-template-columns: 1fr; gap: 16px; }
+  .promo-visual { height: 360px; }
+  .promo-meta { padding: 16px; }
+  .text-4xl { font-size: 2.2rem; } /* keep hero reasonable on small screens */
+  .container { padding-left: 1rem; padding-right: 1rem; }
+}

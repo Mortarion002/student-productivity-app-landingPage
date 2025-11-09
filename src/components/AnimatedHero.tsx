@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function AnimatedHero() {
   return (
-    <section className="relative mb-12">
+    <section className="relative mb-12 page-hero">
       <div className="hero-blob" aria-hidden="true" />
 
       <div className="container text-center relative z-10">
@@ -36,7 +36,7 @@ export default function AnimatedHero() {
           transition={{ delay: 0.18, duration: 0.6 }}
           className="mt-6 flex items-center justify-center gap-3"
         >
-          <Link href="#download" className="inline-block px-5 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow hover:opacity-95">
+          <Link href="#download" className="inline-block px-6 py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow hover:opacity-95">
             Download APK
           </Link>
 
