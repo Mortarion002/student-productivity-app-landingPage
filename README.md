@@ -1,234 +1,171 @@
-# Aman's Toolbox — Extensions Showcase
+# Student Productivity App Landing Page
 
-A modern, performant gallery built with **Next.js 14**, **React 18**, and **Tailwind CSS** to showcase a curated collection of Chrome and VS Code extensions.
+A modern, responsive landing page for the **Student Planner App**, built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**. It showcases the features, UI, and technology stack of the mobile app — designed to help students manage their **tasks, notes, and expenses** efficiently.
 
-## 🚀 Features
+🔗 **Live Site:** [Student Productivity App Landing Page](https://github.com/EternalKnight002/student-productivity-app-landingPage.git)
 
-- **Responsive Design** — Optimized for mobile, tablet, and desktop screens
-- **Dark Mode** — Seamless theme toggle powered by `next-themes`
-- **Smooth Animations** — Framer Motion–driven transitions for hero, cards, and sections
-- **Accessible** — WCAG-compliant markup with semantic HTML and ARIA labels
-- **Data-Driven** — Extensions loaded from `data/extensions.json` (live badge count)
-- **Video Tutorials** — Inline video players with custom play overlays
-- **Modern CSS** — Glassmorphism cards, gradient blobs, and shimmer effects
-- **Production-Ready** — TypeScript strict mode, ESLint, and PostCSS with Autoprefixer
+📱 **Main App Repository:** [Student Planner App](https://github.com/EternalKnight002/student-productivity-app)
 
-## 📋 Tech Stack
+---
 
-| Layer | Tools |
-|-------|-------|
-| **Framework** | Next.js 14 (App Router) |
-| **UI Library** | React 18.2 |
-| **Styling** | Tailwind CSS 3.4 + PostCSS |
-| **Animations** | Framer Motion 12 |
-| **Icons** | Lucide React, React Icons |
-| **Themes** | next-themes 0.4 |
-| **Dialogs** | Radix UI Dialog |
-| **Language** | TypeScript 5.5 |
-| **Linting** | ESLint + Next.js config |
+## ✨ Overview
 
-## 🏗️ Project Structure
+This landing page acts as the web showcase for the **Student Planner App**, highlighting its design, features, and core functionalities with smooth animations, gradients, and call-to-action sections. It’s built for performance, accessibility, and aesthetics.
 
-```
-.
-├── src/
-│   ├── app/
-│   │   ├── globals.css          # Global styles (Tailwind, custom utilities)
-│   │   ├── layout.tsx           # Root layout with header, footer, theme provider
-│   │   └── page.tsx             # Homepage with hero and extension gallery
-│   ├── components/
-│   │   ├── AnimatedHero.tsx     # Hero section with Framer Motion
-│   │   ├── ExtensionCard.tsx    # Individual extension card with hover effects
-│   │   ├── HowToDownloadSection.tsx # Video tutorials + installation steps
-│   │   ├── VideoPlayer.tsx      # Custom video player with poster & controls
-│   │   ├── ThemeToggle.tsx      # Dark/light mode switcher
-│   │   ├── SearchInput.tsx      # Search bar component (stub)
-│   │   └── Modal.tsx            # Radix UI dialog wrapper
-│   └── types/
-│       └── global.d.ts          # TypeScript globals (CSS imports)
-├── data/
-│   └── extensions.json          # Extension metadata (title, links, screenshots)
-├── public/
-│   ├── screenshots/             # Extension preview images
-│   └── videos/                  # Tutorial videos & posters
-├── tailwind.config.js           # Tailwind customization
-├── tsconfig.json                # TypeScript configuration
-├── next.config.js               # Next.js configuration
-├── eslint.config.mjs            # ESLint rules
-└── package.json                 # Dependencies & scripts
-```
+### 🌟 Key Highlights
 
-## 🛠️ Getting Started
+* Interactive and animated hero section with gradient highlights
+* Beautifully designed features and app preview mockups
+* Smooth scrolling and responsive layouts
+* Dark/light theme toggle
+* Dynamic technology showcase section
+* Engaging call-to-action with direct download links
+
+---
+
+## 🧠 Sections
+
+### 1. **Hero Section** (`AnimatedHero.tsx`)
+
+* Animated introduction showcasing the app’s purpose
+* Direct download and GitHub view buttons
+* Floating UI mockups with motion effects
+
+### 2. **Technology Stack Section** (`BrandSection.tsx`)
+
+* Animated display of key technologies used: React Native, Expo, TypeScript, Zustand, etc.
+
+### 3. **Why Us Section** (`FeaturesSection.tsx`)
+
+* Lists main advantages like Expense Tracking, Unified Productivity, and Analytics
+
+### 4. **App Features Section** (`AppFeaturesSection.tsx`)
+
+* Displays app capabilities: Task Management, Notes, and Expenses
+* Includes mobile mockups styled like real app screens
+
+### 5. **Call-to-Action Section** (`CTASection.tsx`)
+
+* Gradient background section prompting users to download or explore
+* App preview screenshots with layered glowing effects
+
+### 6. **Video and Modal Components** (`VideoPlayer.tsx`, `Modal.tsx`)
+
+* Custom reusable video player component with overlay play button
+* Responsive modal for embedded content
+
+### 7. **Theme Toggle** (`ThemeToggle.tsx`)
+
+* Implements light/dark mode using `next-themes`
+
+---
+
+## 🛠️ Tech Stack
+
+| Category          | Technologies                                |
+| ----------------- | ------------------------------------------- |
+| **Framework**     | Next.js 14 (App Router)                     |
+| **Language**      | TypeScript                                  |
+| **Styling**       | Tailwind CSS                                |
+| **Animations**    | Framer Motion                               |
+| **UI Components** | Radix UI, Lucide Icons, React Icons         |
+| **Theming**       | next-themes                                 |
+| **Other**         | Intersection Observer for scroll animations |
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- **Node.js** 18+ (recommended 20+)
-- **npm**, **yarn**, **pnpm**, or **bun**
+* Node.js 18+
+* npm or yarn
 
 ### Installation
 
-1. **Clone the repository:**
+```bash
+git clone https://github.com/EternalKnight002/student-productivity-app-landingPage.git
+cd student-productivity-app-landingPage
+npm install
+```
 
-   ```bash
-   git clone <repository-url>
-   cd my-extensions-site
-   ```
-
-2. **Install dependencies:**
-
-   ```bash
-   npm install
-   # or
-   yarn install
-   # or
-   pnpm install
-   # or
-   bun install
-   ```
-
-3. **Run the development server:**
-
-   ```bash
-   npm run dev
-   ```
-
-   Open [http://localhost:3000](http://localhost:3000) in your browser. The page auto-refreshes as you edit files.
-
-### Scripts
+### Run Locally
 
 ```bash
-npm run dev       # Start development server on port 3000
-npm run build     # Build for production
-npm start         # Start production server
-npm run lint      # Run ESLint
-npm run typecheck # Type-check with TypeScript (no emit)
+npm run dev
 ```
 
-## 📝 Configuration
+Visit: [http://localhost:3000](http://localhost:3000)
 
-### Adding Extensions
+### Build for Production
 
-Edit `data/extensions.json` to add or modify extensions:
-
-```json
-{
-  "title": "My Awesome Extension",
-  "slug": "my-awesome-extension",
-  "shortDesc": "A brief one-liner description.",
-  "longDesc": "Detailed description for modal or info pages.",
-  "tags": ["chrome", "productivity"],
-  "screenshots": ["/screenshots/my-awesome-1.jpg"],
-  "githubUrl": "https://github.com/username/repo",
-  "downloadUrl": "https://github.com/username/repo/releases/...",
-  "poster": "/videos/my-awesome-poster.jpg"
-}
+```bash
+npm run build
+npm start
 ```
 
-The **live badge count** in the header updates automatically from this file.
+---
 
-### Customizing Styles
+## 📂 Project Structure
 
-- **Global theme colors** are defined in `src/app/globals.css` (`:root` and `.dark`)
-- **Tailwind utilities** extend in `tailwind.config.js`
-- **Dark mode** uses the `class` strategy (controlled by `next-themes`)
+```
+student-productivity-app-landingPage/
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx        # Root layout with header, footer, and metadata
+│   │   └── page.tsx          # Homepage assembling all sections
+│   └── components/
+│       ├── AnimatedHero.tsx
+│       ├── AppFeaturesSection.tsx
+│       ├── BrandSection.tsx
+│       ├── CTASection.tsx
+│       ├── FeaturesSection.tsx
+│       ├── Modal.tsx
+│       ├── ThemeToggle.tsx
+│       ├── VideoPlayer.tsx
+│       └── SearchInput.tsx
+├── public/
+│   ├── screenshots/          # App screenshots used in mockups
+│   └── mockups/              # Device mockup images
+├── styles/globals.css        # Global Tailwind + custom animations
+├── tailwind.config.js
+├── tsconfig.json
+├── package.json
+└── README.md
+```
 
-### Environment Variables
+---
 
-None required for local development. For production deployments (e.g., Vercel), ensure `NEXT_PUBLIC_*` variables are set if needed.
+## 💡 Design Notes
 
-## 🎨 Key Components
+* Built with a **minimal yet vibrant gradient aesthetic**
+* Focused on **clean typography and balanced whitespace**
+* **Motion design principles** for natural UI flow
+* Fully **responsive** on all devices
 
-### AnimatedHero.tsx
+---
 
-Renders the main hero section with fade-in animations and a decorative gradient blob (CSS-based).
+## 👤 Author
 
-### ExtensionCard.tsx
+**Aman Kumar**
+📧 [alternatewavelenght@gmail.com](mailto:alternatewavelenght@gmail.com)
+🔗 [GitHub](https://github.com/EternalKnight002) · [LinkedIn](https://linkedin.com/in/aman-kumar-537a73296) · [X (Twitter)](https://x.com/Eternalknigh)
 
-Card component displaying extension metadata with:
-- Background image with fallback
-- Overlay gradient for text contrast
-- Hover effects (image blur, title translation, description reveal)
-- Action buttons (GitHub, Download)
+---
 
-### HowToDownloadSection.tsx
+## 🪪 License
 
-Two-column tutorial section with:
-- Custom `VideoPlayer` component
-- Step-by-step installation guides
-- Responsive grid layout
-- Framer Motion entrance animations
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-### VideoPlayer.tsx
+---
 
-Lightweight video player with:
-- Poster image support
-- Custom play button overlay
-- Native HTML5 video controls (appear after play)
-- Accessibility labels
+## ❤️ Acknowledgments
 
-## 🌗 Theme Support
+* **Framer Motion** for smooth, elegant animations
+* **Tailwind CSS** for rapid UI styling
+* **Next.js** for server-rendered and optimized performance
+* **React Native App Inspiration** from the main [Student Planner App](https://github.com/EternalKnight002/student-productivity-app)
 
-The site uses `next-themes` for seamless dark mode. Toggle via the `ThemeToggle` button in the header. Theme preference is persisted in the browser.
+---
 
-## ♿ Accessibility
-
-- Semantic HTML (`<article>`, `<section>`, `<header>`, `<footer>`)
-- ARIA labels on interactive elements
-- Focus rings on buttons and links
-- Color contrast compliance (WCAG AA)
-- Respects `prefers-reduced-motion` for animations
-
-## 📦 Deployment
-
-### Deploy on Vercel
-
-The easiest way to deploy this Next.js app:
-
-1. Push your code to GitHub (or GitLab/Bitbucket)
-2. Import the project at [vercel.com](https://vercel.com/new)
-3. Vercel auto-detects Next.js and sets default build settings
-4. Click Deploy — your site is live!
-
-### Other Platforms
-
-Next.js can be deployed to any Node.js hosting service. See the [deployment docs](https://nextjs.org/docs/app/building-your-applications/deploying) for details.
-
-## 🐛 Troubleshooting
-
-### Extensions not showing?
-
-- Ensure `data/extensions.json` exists and is valid JSON
-- Check the console for parsing errors
-- Verify file paths in the JSON (screenshots, videos, etc.)
-
-### Styles not applying?
-
-- Run `npm install` to ensure all dependencies are installed
-- Restart the dev server after Tailwind config changes
-- Clear `.next/` cache: `rm -rf .next && npm run dev`
-
-### Video won't play?
-
-- Check that video files exist at the specified paths in `public/videos/`
-- Verify video format compatibility (MP4 recommended)
-- Ensure browser allows autoplay (some require user interaction first)
-
-## 📄 License
-
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
-
-## 🤝 Contributing
-
-Found a bug or have a feature idea? Drop an issue on GitHub or reach out via:
-
-- **Email:** resoamankumar@gmail.com
-- **GitHub:** [EternalKnight002](https://github.com/EternalKnight002)
-- **Twitter/X:** [@Eternalknigh](https://x.com/Eternalknigh)
-- **LinkedIn:** [Aman Kumar](https://linkedin.com/in/aman-kumar-537a73296)
-
-## 📚 Learn More
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Tailwind CSS Docs](https://tailwindcss.com/docs)
-- [Framer Motion Guide](https://www.framer.com/motion/)
-- [React Hooks API](https://react.dev/reference/react)
+> *A clean, modern, and performance-optimized landing page to showcase your student productivity app with style and motion.*
