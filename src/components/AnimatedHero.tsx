@@ -1,22 +1,24 @@
+// src/components/AnimatedHero.tsx
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 
-const floatingVariants = {
+const floatingVariants: Variants = {
   initial: { y: 0 },
   animate: {
     y: [-10, 10, -10],
     transition: {
       duration: 6,
       repeat: Infinity,
-      ease: "easeInOut"
+      // Use a numeric cubic-bezier easing array (typed correctly)
+      ease: [0.42, 0, 0.58, 1]
     }
   }
 };
 
-const fadeInUp = {
+const fadeInUp: Variants = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0 }
 };
