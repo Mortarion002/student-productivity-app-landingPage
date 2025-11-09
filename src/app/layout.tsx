@@ -45,11 +45,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <header className="py-3 backdrop-blur-sm">
             <div className="container flex items-center justify-between">
               <Link href="/" className="flex items-center gap-3">
-                <div className="relative">
-                  <div className="rounded-full p-2 bg-gradient-to-br from-indigo-500 to-cyan-400 shadow-md">
-                    <div className="h-9 w-9 rounded-full bg-white/10" />
+                <div className="relative h-12 w-12 rounded-full overflow-hidden shadow-md border border-white/20">
+                    <img
+                      src="/splash.png"
+                      alt="Student Planner Logo"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                </div>
+
 
                 <div>
                   <h2 className="text-base md:text-lg font-semibold tracking-tight text-slate-900 dark:text-white">

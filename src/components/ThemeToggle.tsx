@@ -6,13 +6,12 @@ import { useTheme } from "next-themes";
 import { Sun, Moon } from "lucide-react";
 import { motion } from "framer-motion";
 
-
-
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
   return (
     <button
+      type="button"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       aria-label="Toggle theme"
       className="p-2 rounded-full focus-ring bg-transparent"

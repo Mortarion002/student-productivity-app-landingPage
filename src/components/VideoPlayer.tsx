@@ -62,6 +62,7 @@ export default function VideoPlayer({ src, poster, title }: Props) {
 
         {!isPlaying && (
           <button
+            type="button"
             aria-label={`Play ${title || "video"}`}
             className="video-play-overlay"
             onClick={handleOverlayClick}
@@ -76,7 +77,6 @@ export default function VideoPlayer({ src, poster, title }: Props) {
 
       <div className="mt-4">
         <div className="text-sm text-gray-700 dark:text-gray-300">{title}</div>
-        
       </div>
     </div>
   );
