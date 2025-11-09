@@ -148,7 +148,7 @@ student-productivity-app-landingPage/
 ## 👤 Author
 
 **Aman Kumar**
-📧 [alternatewavelenght@gmail.com](mailto:alternatewavelenght@gmail.com)
+📧 [resoamankumar@gmail.com](mailto:alternatewavelenght@gmail.com)
 🔗 [GitHub](https://github.com/EternalKnight002) · [LinkedIn](https://linkedin.com/in/aman-kumar-537a73296) · [X (Twitter)](https://x.com/Eternalknigh)
 
 ---
