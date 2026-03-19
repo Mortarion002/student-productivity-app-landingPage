@@ -113,7 +113,7 @@ export default function FeaturesSection() {
                 </p>
 
                 <a
-                  href="https://github.com/EternalKnight002/student-productivity-app"
+                  href="https://github.com/Mortarion002/student-productivity-app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-indigo-600 dark:text-indigo-400 font-semibold group-hover:gap-2 transition-all duration-300"

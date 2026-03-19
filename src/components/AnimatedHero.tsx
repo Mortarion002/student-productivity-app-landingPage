@@ -66,14 +66,14 @@ export default function AnimatedHero() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"
           >
             <Link
-              href="#download"
+              href="https://github.com/Mortarion002/student-productivity-app/releases/download/v1/student-productivity-app_v1.apk"
               className="inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold text-lg shadow-lg shadow-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/40 hover:-translate-y-0.5 transition-all duration-300"
             >
               Download APK
             </Link>
 
             <a
-              href="https://github.com/EternalKnight002/student-productivity-app"
+              href="https://github.com/Mortarion002/student-productivity-app"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 rounded-2xl border-2 border-gray-300 dark:border-gray-600 text-gray-800 dark:text-gray-200 font-semibold text-lg bg-white/60 dark:bg-white/5 backdrop-blur-sm hover:bg-white/80 dark:hover:bg-white/10 hover:-translate-y-0.5 transition-all duration-300"

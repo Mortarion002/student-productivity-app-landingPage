@@ -56,14 +56,14 @@ export default function CTASection() {
                 className="flex flex-col sm:flex-row items-center justify-center gap-4"
               >
                 <Link
-                  href="#download"
+                  href="https://github.com/Mortarion002/student-productivity-app/releases/download/v1/student.s-productivity-app_v1.apk"
                   className="inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-white text-indigo-600 font-semibold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 min-w-[200px]"
                 >
                   Download APK
                 </Link>
 
                 <a
-                  href="https://expo.dev/artifacts/eas/7314BW6P1Uj7YfWZmbSsRE.apk"
+                  href="https://github.com/Mortarion002/student-productivity-app/releases/download/v1/student.s-productivity-app_v1.apk"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 rounded-2xl border-2 border-white text-white font-semibold text-lg hover:bg-white/10 hover:scale-105 transition-all duration-300 min-w-[200px]"
