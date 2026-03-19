@@ -2,7 +2,7 @@
 
 A modern, responsive landing page for the **Student Planner App**, built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**. It showcases the features, UI, and technology stack of the mobile app — designed to help students manage their **tasks, notes, and expenses** efficiently.
 
-🔗 **Live Site:** [Student Productivity App Landing Page](https://github.com/Mortarion002/student-productivity-app-landingPage.git)
+📍 **Live Site:** [Student Productivity App Landing Page](https://student-productivity-app-landing-pa.vercel.app/)
 
 📱 **Main App Repository:** [Student Planner App](https://github.com/Mortarion002/student-productivity-app)
 
