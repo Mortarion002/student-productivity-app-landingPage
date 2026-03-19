@@ -17,7 +17,7 @@ export const metadata = {
   openGraph: {
     images: ["/videos/student-how-to-download-poster.jpg"],
   },
-  authors: [{ name: "Aman Kumar", url: "https://github.com/EternalKnight002" }],
+  authors: [{ name: "Aman Kumar", url: "https://github.com/Mortarion002" }],
 };
 
 async function getExtensionsCount(): Promise<number> {
@@ -84,7 +84,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 </p>
 
                 <a
-                  href="https://github.com/EternalKnight002/student-productivity-app/issues"
+                  href="https://github.com/Mortarion002/student-productivity-app/issues"
                   role="button"
                   aria-describedby="footer-contact-desc"
                   className="footer-cta mt-6 inline-block shimmer-hover"
@@ -96,7 +96,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
                 <div className="footer-social mt-8" aria-hidden="false">
                   <a
-                    href="https://github.com/EternalKnight002"
+                    href="https://github.com/Mortarion002"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="footer-social__link"
@@ -106,7 +106,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                   </a>
 
                   <a
-                    href="https://x.com/Eternalknigh?t=9zzpTY3YIyS5hs7ts27LmQ&s=09"
+                    href="https://x.com/CloudKnight002"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="footer-social__link"

@@ -2,9 +2,9 @@
 
 A modern, responsive landing page for the **Student Planner App**, built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**. It showcases the features, UI, and technology stack of the mobile app — designed to help students manage their **tasks, notes, and expenses** efficiently.
 
-🔗 **Live Site:** [Student Productivity App Landing Page](https://github.com/EternalKnight002/student-productivity-app-landingPage.git)
+🔗 **Live Site:** [Student Productivity App Landing Page](https://github.com/Mortarion002/student-productivity-app-landingPage.git)
 
-📱 **Main App Repository:** [Student Planner App](https://github.com/EternalKnight002/student-productivity-app)
+📱 **Main App Repository:** [Student Planner App](https://github.com/Mortarion002/student-productivity-app)
 
 ---
 
@@ -84,7 +84,7 @@ This landing page acts as the web showcase for the **Student Planner App**, high
 ### Installation
 
 ```bash
-git clone https://github.com/EternalKnight002/student-productivity-app-landingPage.git
+git clone https://github.com/Mortarion002/student-productivity-app-landingPage.git
 cd student-productivity-app-landingPage
 npm install
 ```
@@ -149,7 +149,7 @@ student-productivity-app-landingPage/
 
 **Aman Kumar**
 📧 [alternatewavelenght@gmail.com](mailto:alternatewavelenght@gmail.com)
-🔗 [GitHub](https://github.com/EternalKnight002) · [LinkedIn](https://linkedin.com/in/aman-kumar-537a73296) · [X (Twitter)](https://x.com/Eternalknigh)
+🔗 [GitHub](https://github.com/Mortarion002) · [LinkedIn](https://linkedin.com/in/aman-kumar-537a73296) · [X (Twitter)](https://x.com/CloudKnight002)
 
 ---
 
